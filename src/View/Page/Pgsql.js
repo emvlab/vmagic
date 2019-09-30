@@ -304,6 +304,31 @@ export default class Home extends Component {
                                 </code>
                             </pre>
                         </div>
+
+                        <div id="controllerDelete">
+                            <h5>Delete()</h5>
+                            <p className="text-secondary">Método usado para excluir um registro da base de dados</p>
+                            <pre className="bg-dark">
+                                <code className="text-white">
+                                    {`
+                                        delete(callback) {
+                                            this.Example.Delete({"id": this.payload.id}).
+                                                then(res => {
+                                                    this.logger.info(res.rows);
+                                                    //Retorna a resposta para o front end.
+                                                    callback(this.responseSuccess(res.rows));
+                                                }).
+                                                catch(err => {
+                                                    this.statusCode = 500;
+                                                    this.logger.error(err.message);
+                                                    callback(this.responseError("Erro", err.message, this.statusCode));
+                                                });
+                                        }
+                                    `}
+                                </code>
+                            </pre>
+                        </div>
+
                         <div id="model">
                             <h5>Sobrescrevendo o método findAll()</h5>
                             <p className="text-secondary">Na model pode sobrescrever algum método padão ou criar um novo.</p>
