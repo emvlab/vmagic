@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.a21e4bb4.chunk.css",
-    "main.js": "/static/js/main.bb83938a.chunk.js",
-    "main.js.map": "/static/js/main.bb83938a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.876fc174.js",
-    "runtime-main.js.map": "/static/js/runtime-main.876fc174.js.map",
-    "static/css/2.22a7d4ef.chunk.css": "/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.0758f3d7.chunk.js": "/static/js/2.0758f3d7.chunk.js",
-    "static/js/2.0758f3d7.chunk.js.map": "/static/js/2.0758f3d7.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.ab44e512687b1849e0dee5ab8ba301e7.js": "/precache-manifest.ab44e512687b1849e0dee5ab8ba301e7.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/2.22a7d4ef.chunk.css.map": "/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.a21e4bb4.chunk.css.map": "/static/css/main.a21e4bb4.chunk.css.map",
-    "static/media/logo.png": "/static/media/logo.72cfda8f.png"
+    "main.css": "/vmagic/static/css/main.a21e4bb4.chunk.css",
+    "main.js": "/vmagic/static/js/main.50d640c2.chunk.js",
+    "main.js.map": "/vmagic/static/js/main.50d640c2.chunk.js.map",
+    "runtime-main.js": "/vmagic/static/js/runtime-main.23b20da1.js",
+    "runtime-main.js.map": "/vmagic/static/js/runtime-main.23b20da1.js.map",
+    "static/css/2.22a7d4ef.chunk.css": "/vmagic/static/css/2.22a7d4ef.chunk.css",
+    "static/js/2.0758f3d7.chunk.js": "/vmagic/static/js/2.0758f3d7.chunk.js",
+    "static/js/2.0758f3d7.chunk.js.map": "/vmagic/static/js/2.0758f3d7.chunk.js.map",
+    "index.html": "/vmagic/index.html",
+    "precache-manifest.843df5ba5d9ff3654f1054e19d99153e.js": "/vmagic/precache-manifest.843df5ba5d9ff3654f1054e19d99153e.js",
+    "service-worker.js": "/vmagic/service-worker.js",
+    "static/css/2.22a7d4ef.chunk.css.map": "/vmagic/static/css/2.22a7d4ef.chunk.css.map",
+    "static/css/main.a21e4bb4.chunk.css.map": "/vmagic/static/css/main.a21e4bb4.chunk.css.map",
+    "static/media/logo.png": "/vmagic/static/media/logo.72cfda8f.png"
   }
 }
