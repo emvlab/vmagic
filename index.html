@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>vMagic Framework - NodeJS</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vMagic framework"/>
+    <meta name="author" content="">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!-- FontAwesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/prism/prism.css">
+    <link rel="stylesheet" href="assets/plugins/elegant_font/css/style.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body class="body-green">
+    <div class="page-wrapper">
+        <!-- ******Header****** -->
+        <header id="header" class="header">
+            <div class="container">
+                <div class="branding">
+                    <h1 class="logo">
+                        <a href="index.html">
+                            <!-- <span aria-hidden="true" class="icon_documents_alt icon"></span> -->
+                            <img src="assets/images/logo.png" width="70"/>
+                            <span class="text-highlight">vMagic</span><span class="text-bold">Docs</span>
+                        </a>
+                    </h1>
+
+                </div><!--//branding-->
+
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active">Quick Start</li>
+                </ol>
+
+                <!-- <div class="top-search-box">
+	                 <form class="form-inline search-form justify-content-center" action="" method="get">
+			            <input type="text" placeholder="Search..." name="search" class="form-control search-input">
+			            <button type="submit" class="btn search-btn" value="Search"><i class="fas fa-search"></i></button>
+			        </form>
+                </div> -->
+
+            </div><!--//container-->
+        </header><!--//header-->
+        <div class="doc-wrapper">
+            <div class="container">
+                <div id="doc-header" class="doc-header text-center">
+                    <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
+                    <!-- <div class="meta"><i class="far fa-clock"></i> Last updated: July 18th, 2018</div> -->
+                </div><!--//doc-header-->
+                <div class="doc-body row">
+                    <div class="doc-content col-md-9 col-12 order-1">
+                        <div class="content-inner">
+                            <section id="installation-section" class="doc-section">
+                                <h2 class="section-title">Installation</h2>
+                                <div id="step1"  class="section-block">
+                                    <h3 class="block-title">Step One</h3>
+                                    <p>vMagic is a RESTFul framework for NodeJS applications. The goal about this framework is simplify the connection between nodejs and the most popular databases improving the development production of team.</p>
+                                    <div class="code-block">
+                                        <h6>Default code example:</h6>
+                                        <p><code>npm install vmagic-cli</code></p>
+                                        <p><code>vmagic-cli new &lt;NameProject&gt;</code></p>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="step2"  class="section-block">
+                                    <h3 class="block-title">Step Two</h3>
+                                    <ul class="list">
+                                        <li>Enter in the &lt;NameProject&gt; && npm install</li>
+                                        <li>Set your IP / PORT in your file init.js</li>
+                                        <li>Execute node init.js to start server.</li>
+                                    </ul>
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="config-section" class="doc-section">
+                                <h2 class="section-title">Config</h2>
+                                <div id="mysql" class="section-block">
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-thumbs-up"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">All project configurations you can find here</h4>
+                                            <p>
+                                                core.json you might: <br/>
+                                                <ul>
+                                                    <li>Configure the database connection.</li>
+                                                    <li>Configure the Sender email.</li>
+                                                    <li>Configure a default path to save the images whenever client send an media's upload.</li>
+                                                </ul>
+                                            </p>
+                                        </div><!--//content-->
+                                    </div>
+                                    <div class="code-block">
+                                        <h6>MySQL Connection</h6>
+                                        <pre><code class="language-markup">
+"dataSources" : {
+	"default" : {
+		"dataSource" : "MySQL",
+		"host" : "127.0.0.1",
+		"port" : 3306,
+		"user" : "root",
+		"password" : "",
+		"database" : "dbname",
+        "connectionLimit" : 50
+	},
+	"test" : {
+		"dataSource" : "MySQL",
+		"host" : "127.0.0.1",
+		"port" : 3306,
+		"user" : "root",
+		"password" : "",
+		"database" : "dbname_test",
+        "connectionLimit" : 50
+	}
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="postgresql" class="section-block">
+                                    <div class="code-block">
+                                        <h6>PostgreSQL Connection</h6>
+                                        <pre><code class="language-markup">
+"dataSources" : {
+	"default" : {
+		"dataSource" : "PgSQL",
+		"host" : "127.0.0.1",
+		"port" : 5432,
+		"user" : "root",
+		"password" : "",
+		"database" : "dbname",
+        "connectionLimit" : 50
+	},
+	"test" : {
+		"dataSource" : "PgSQL",
+		"host" : "127.0.0.1",
+		"port" : 5432,
+		"user" : "root",
+		"password" : "",
+		"database" : "dbname_test",
+        "connectionLimit" : 50
+	}
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="controller-section" class="doc-section">
+                                <h2 class="section-title">Controller</h2>
+                                <div id="get" class="section-block">
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-thumbs-up"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Each controller in your project is a /resource in your API Rest.</h4>
+                                            <p>For example: If you create an UsersController, Than you available a resource /Users that you can call It as http://ip:port/Users.</p>
+                                        </div><!--//content-->
+                                    </div>
+                                    <div class="code-block">
+                                        <h6>You must have call It with the http-method GET.</h6>
+                                        <pre><code class="language-javascript">"use strict";
+const AppController = require("./AppController");
+class UsersController extends AppController {
+
+    init() {
+        this.model([
+            "User"
+        ]);
+    }
+
+    //http://127.0.0.1:5555/Users
+    async get(callback) {
+        //To get query params.
+        const query = this.query;
+
+        callback({"message" : "Test request"}); //Response to the client who sent request.
+    }
+}
+module.exports = UsersController;</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+
+                                <div id="post" class="section-block">
+                                    <div class="code-block">
+                                        <h6>You must have call It with the http-method POST.</h6>
+                                        <pre><code class="language-javascript">"use strict";
+const AppController = require("./AppController");
+class UsersController extends AppController {
+
+    init() {
+        this.model([
+            "User"
+        ]);
+    }
+
+    //http://127.0.0.1:5555/Users
+    async post(callback) {
+        //To get payload.
+        const payload = this.payload;
+
+        callback({"message" : "Test request"}); //Response to the client who sent request.
+    }
+}
+module.exports = UsersController;</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+
+                                <div id="put" class="section-block">
+                                    <div class="code-block">
+                                        <h6>You must have call It with the http-method PUT.</h6>
+                                        <pre><code class="language-javascript">"use strict";
+const AppController = require("./AppController");
+class UsersController extends AppController {
+
+    init() {
+        this.model([
+            "User"
+        ]);
+    }
+
+    //http://127.0.0.1:5555/Users/id
+    async put(callback) {
+        //To get payload.
+        const payload = this.payload;
+        //To get param id.
+        const id = this.id;
+
+        callback({"message" : "Test request"}); //Response to the client who sent request.
+    }
+}
+module.exports = UsersController;</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+
+                                <div id="delete" class="section-block">
+                                    <div class="code-block">
+                                        <h6>You must have call It with the http-method DELETE.</h6>
+                                        <pre><code class="language-javascript">"use strict";
+const AppController = require("./AppController");
+class UsersController extends AppController {
+
+    init() {
+        this.model([
+            "User"
+        ]);
+    }
+
+    //http://127.0.0.1:5555/Users/id
+    async delete(callback) {
+        //To get payload.
+        const payload = this.payload;
+        //To get param id.
+        const id = this.id;
+
+        callback({"message" : "Test request"}); //Response to the client who sent request.
+    }
+}
+module.exports = UsersController;</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+
+                                <div id="other-resource" class="section-block">
+                                    <div class="code-block">
+                                        <h6>It is a sample of how to create a custom action.</h6>
+                                        <pre><code class="language-javascript">"use strict";
+const AppController = require("./AppController");
+class UsersController extends AppController {
+
+    init() {
+        this.model([
+            "User"
+        ]);
+    }
+
+    //http://127.0.0.1:5555/Users/customAction
+    async customAction(callback) {
+        //To get payload.
+        const payload = this.payload;
+        //To get query params.
+        const query = this.query;
+
+        callback({"message" : "Test request"}); //Response to the client who sent request.
+    }
+}
+module.exports = UsersController;</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+
+                            <section id="model-section" class="doc-section">
+                                <h2 class="section-title">Model</h2>
+                                <div id="save"  class="section-block">
+                                    <div class="callout-block callout-success">
+                                        <div class="icon-holder">
+                                            <i class="fas fa-thumbs-up"></i>
+                                        </div><!--//icon-holder-->
+                                        <div class="content">
+                                            <h4 class="callout-title">Each model is a reference from database table.</h4>
+                                            <p>Each model is a reference from database table.</p>
+                                        </div><!--//content-->
+                                    </div>
+                                    <div class="code-block">
+                                        <h6>Sample of INSERT INTO &lt;table_name&gt;.</h6>
+                                        <pre><code class="language-javascript">async post(callback) {
+    let response = null;
+    try {
+        const res = await this.User.save({
+            "name": "Diego Vargas",
+            "age": 28
+        });
+        response = res;
+    } catch (err) {
+        if (!this.statusCode) {
+            this.statusCode = 500;
+        }
+        response = {
+            "error": {
+                "statusCode": this.statusCode,
+                "title": "Failed",
+                "detail": err.message
+            }
+        }
+    }
+    callback(response); //Response to the client who sent request.
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="update"  class="section-block">
+                                    <h3 class="block-title">update</h3>
+                                    <div class="code-block">
+                                        <h6>Sample of UPDATE &lt;table_name&gt; SET &lt;field&gt; = ? WHERE id = ?</h6>
+                                        <pre><code class="language-javascript">async put(callback) {
+    let response = null;
+    try {
+
+        const res = await this.User.update({
+            "name": "Diego Vargas Updated"
+        }, { "id" : 1 });
+
+        response = res;
+    } catch (err) {
+        if (!this.statusCode) {
+            this.statusCode = 500;
+        }
+        response = {
+            "error": {
+                "statusCode": this.statusCode,
+                "title": "Failed",
+                "detail": err.message
+            }
+        }
+    }
+    callback(response); //Response to the client who sent request.
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="model-delete"  class="section-block">
+                                    <h3 class="block-title">delete</h3>
+                                    <div class="code-block">
+                                        <h6>Sample of DELETE FROM &lt;table_name&gt; WHERE id = ?</h6>
+                                        <pre><code class="language-javascript">async delete(callback) {
+    let response = null;
+    try {
+
+        const res = await this.User.delete({ "id" : 1 });
+
+        response = res;
+    } catch (err) {
+        if (!this.statusCode) {
+            this.statusCode = 500;
+        }
+        response = {
+            "error": {
+                "statusCode": this.statusCode,
+                "title": "Failed",
+                "detail": err.message
+            }
+        }
+    }
+    callback(response); //Response to the client who sent request.
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="findall"  class="section-block">
+                                    <h3 class="block-title">findAll</h3>
+                                    <div class="code-block">
+                                        <h6>Sample of SELECT * FROM &lt;table_name&gt; WHERE &lt;field&gt; = ?</h6>
+                                        <pre><code class="language-javascript">async get(callback) {
+    let response = null;
+    try {
+
+        const params = {
+            "conditions": {
+                "id": 1,
+                "operation": "="
+            },
+            "join": [
+                { "INNER": { "table": "company", "on": "company.id = user.company_id" } }
+            ],
+            "fields": [
+                "user.*",
+                "company.trade_name"
+            ],
+            "order": [
+                "user.id"
+            ]
+        }
+
+        const res = await this.User.findAll(params);
+
+        response = res;
+    } catch (err) {
+        if (!this.statusCode) {
+            this.statusCode = 500;
+        }
+        response = {
+            "error": {
+                "statusCode": this.statusCode,
+                "title": "Failed",
+                "detail": err.message
+            }
+        }
+    }
+    callback(response); //Response to the client who sent request.
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="findby"  class="section-block">
+                                    <h3 class="block-title">findBy</h3>
+                                    <div class="code-block">
+                                        <h6>Sample of SELECT * FROM &lt;table_name&gt; WHERE &lt;field&gt; = ?</h6>
+                                        <pre><code class="language-javascript">async findBy(callback) {
+    let response = null;
+    try {
+
+        const res = await this.User.findBy({ "id": 1 });
+
+        response = res;
+    } catch (err) {
+        if (!this.statusCode) {
+            this.statusCode = 500;
+        }
+        response = {
+            "error": {
+                "statusCode": this.statusCode,
+                "title": "Failed",
+                "detail": err.message
+            }
+        }
+    }
+    callback(response); //Response to the client who sent request.
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="validations"  class="section-block">
+                                    <h3 class="block-title">Validations</h3>
+                                    <div class="code-block">
+                                        <h6></h6>
+                                        <pre><code class="language-javascript">init() {
+    //Table name
+    this.useTable = "public.user";
+    this.validate([
+        {
+            "name": {
+                "rule": "notEmpty",
+                "message": "field name cannot be empty."
+            }
+        },
+        {
+            "email": {
+                "rule": "notEmpty",
+                "message": "field email cannot be empty."
+            }
+        },
+        {
+            "password": {
+                "rule": "notEmpty",
+                "message": "field password cannot be empty."
+            }
+        }
+    ]);
+}</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                                <div id="custom_query"  class="section-block">
+                                    <h3 class="block-title">Custom query</h3>
+                                    <div class="code-block">
+                                        <h6></h6>
+                                        <pre><code class="language-javascript">'use strict';
+const AppModel = require('./AppModel');
+
+class User extends AppModel {
+
+    init() {
+        //Table name
+        this.useTable = "public.user";
+        this.pgsql = this.component("PgSQL");
+    }
+
+    example() {
+        const that = this;
+
+        return new Promise((resolve,reject) => {
+            this.pgsql.connect().
+                then(connection => {
+                    connection.query("SELECT * FROM &lt;table_name&gt; WHERE name = $1 and permission = $2",["vMagic", "ADMINISTRATOR"], (err,res) => {
+                        that.pgsql.close(connection);
+                        if (err) {
+                            reject(err);
+
+                            return;
+                        }
+
+                        resolve(res);
+                    });
+                }).
+                catch(err => {
+                    reject(err);
+                });
+        });
+    }
+}
+module.exports = User;</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+                            </section><!--//doc-section-->
+                        </div><!--//content-inner-->
+                    </div><!--//doc-content-->
+
+                    <div class="doc-sidebar col-md-3 col-12 order-0 d-none d-md-flex">
+                        <div id="doc-nav" class="doc-nav">
+
+	                            <nav id="doc-menu" class="nav doc-menu flex-column sticky">
+	                                <a class="nav-link scrollto" href="#installation-section">Installation</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#step1">Step One</a>
+                                        <a class="nav-link scrollto" href="#step2">Step Two</a>
+                                    </nav><!--//nav-->
+                                    <a class="nav-link scrollto" href="#config-section">Config</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#mysql">MySQL</a>
+                                        <a class="nav-link scrollto" href="#postgresql">PostgreSQL</a>
+                                        <!-- <a class="nav-link scrollto" href="#mssql">MSSQL</a> -->
+                                    </nav><!--//nav-->
+                                    <a class="nav-link scrollto" href="#controller-section">Controller</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#get">GET</a>
+                                        <a class="nav-link scrollto" href="#post">POST</a>
+                                        <a class="nav-link scrollto" href="#put">PUT</a>
+                                        <a class="nav-link scrollto" href="#delete">DELETE</a>
+                                        <a class="nav-link scrollto" href="#other-resource">OTHER /resource</a>
+                                    </nav><!--//nav-->
+	                                <a class="nav-link scrollto" href="#model-section">Model</a>
+                                    <nav class="doc-sub-menu nav flex-column">
+                                        <a class="nav-link scrollto" href="#save">save</a>
+                                        <a class="nav-link scrollto" href="#update">update</a>
+                                        <a class="nav-link scrollto" href="#model-delete">delete</a>
+                                        <a class="nav-link scrollto" href="#findall">find all</a>
+                                        <a class="nav-link scrollto" href="#findby">find by</a>
+                                        <a class="nav-link scrollto" href="#validations">validations</a>
+                                        <a class="nav-link scrollto" href="#custom_query">Custom Query</a>
+                                    </nav><!--//nav-->
+	                                <!-- <a class="nav-link scrollto" href="#video-section">Video</a> -->
+	                            </nav><!--//doc-menu-->
+
+                        </div>
+                    </div><!--//doc-sidebar-->
+                </div><!--//doc-body-->
+            </div><!--//container-->
+        </div><!--//doc-wrapper-->
+
+        <div id="promo-block" class="promo-block">
+            <div class="container">
+                <div class="promo-block-inner">
+                    <h3 class="promo-title text-center"></h3>
+                    <div class="row">
+                        <div class="figure-holder col-lg-5 col-md-6 col-12">
+                            <div class="figure-holder-inner">
+
+                            </div>
+                        </div><!--//figure-holder-->
+                        <div class="content-holder col-lg-7 col-md-6 col-12">
+                            <div class="content-holder-inner">
+                                <div class="desc">
+
+                                </div><!--//desc-->
+
+                                <!-- <div class="author"><a href="http://www.emvtech.com.br"></a></div> -->
+                            </div><!--//content-holder-inner-->
+                        </div><!--//content-holder-->
+                    </div><!--//row-->
+                </div><!--//promo-block-inner-->
+            </div><!--//container-->
+        </div><!--//promo-block-->
+
+    </div><!--//page-wrapper-->
+
+    <footer id="footer" class="footer text-center">
+        <div class="container">
+            <small class="copyright"><a href="http://www.emvtech.com.br"></a>Power by EMV Technology</small>
+        </div><!--//container-->
+    </footer><!--//footer-->
+
+
+    <!-- Main Javascript -->
+    <script type="text/javascript" src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/prism/prism.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/stickyfill/dist/stickyfill.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>
