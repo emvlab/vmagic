@@ -1,2 +1,1 @@
-# vMagic Doc
-
+#vMagic Framework
