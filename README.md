@@ -1,1 +1,1 @@
-#VMagic Framework
+#vMagic Framework
