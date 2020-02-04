@@ -1,2 +1,0 @@
-# vMagic Doc
-
