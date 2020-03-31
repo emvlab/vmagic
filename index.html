@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>vMagic Framework - NodeJS</title>
+    <title>vMagic Framework - RESTFul framework for NodeJS</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,6 +74,7 @@
                 <div id="doc-header" class="doc-header text-center">
                     <h1 class="doc-title"><i class="icon fa fa-paper-plane"></i> Quick Start</h1>
                     <!-- <div class="meta"><i class="far fa-clock"></i> Last updated: July 18th, 2018</div> -->
+                    <div class="meta">vMagic is a RESTFul framework for NodeJS application.</div>
                 </div><!--//doc-header-->
                 <div class="doc-body row">
                     <div class="doc-content col-md-9 col-12 order-1">
@@ -82,11 +83,21 @@
                                 <h2 class="section-title">Installation</h2>
                                 <div id="step1"  class="section-block">
                                     <h3 class="block-title">Step One</h3>
-                                    <p>vMagic is a RESTFul framework for NodeJS applications. The goal about this framework is simplify the connection between nodejs and the most popular databases improving the development production of team.</p>
                                     <div class="code-block">
-                                        <h6>Default code example:</h6>
                                         <p><code>npm install vmagic-cli</code></p>
                                         <p><code>vmagic-cli new &lt;NameProject&gt;</code></p>
+                                    </div><!--//code-block-->
+                                    <div class="code-block">
+                                        <h6>Project Structure</h6>
+                                        <pre><code class="language-markup">
+Project Name
+    src
+        Component
+        Config
+        Controller
+        Model
+    test
+</code></pre>
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
                                 <div id="step2"  class="section-block">
@@ -179,7 +190,8 @@
                                             <i class="fas fa-thumbs-up"></i>
                                         </div><!--//icon-holder-->
                                         <div class="content">
-                                            <h4 class="callout-title">Each controller in your project is a /resource in your API Rest.</h4>
+
+                                            <h4 class="callout-title">Each /resource in your API is referenced by one Controller.</h4>
                                             <p>For example: If you create an UsersController, Than you available a resource /Users that you can call It as http://ip:port/Users.</p>
                                         </div><!--//content-->
                                     </div>
@@ -196,7 +208,7 @@ class UsersController extends AppController {
     }
 
     //http://127.0.0.1:5555/Users
-    async get(callback) {
+    get(callback) {
         //To get query params.
         const query = this.query;
 
@@ -221,7 +233,7 @@ class UsersController extends AppController {
     }
 
     //http://127.0.0.1:5555/Users
-    async post(callback) {
+    post(callback) {
         //To get payload.
         const payload = this.payload;
 
@@ -246,7 +258,7 @@ class UsersController extends AppController {
     }
 
     //http://127.0.0.1:5555/Users/id
-    async put(callback) {
+    put(callback) {
         //To get payload.
         const payload = this.payload;
         //To get param id.
@@ -273,7 +285,7 @@ class UsersController extends AppController {
     }
 
     //http://127.0.0.1:5555/Users/id
-    async delete(callback) {
+    delete(callback) {
         //To get payload.
         const payload = this.payload;
         //To get param id.
@@ -300,7 +312,7 @@ class UsersController extends AppController {
     }
 
     //http://127.0.0.1:5555/Users/customAction
-    async customAction(callback) {
+    customAction(callback) {
         //To get payload.
         const payload = this.payload;
         //To get query params.
@@ -624,7 +636,7 @@ module.exports = User;</code></pre>
 
     <footer id="footer" class="footer text-center">
         <div class="container">
-            <small class="copyright"><a href="http://www.emvtech.com.br"></a>Power by EMV Technology</small>
+            <small class="copyright"><a href="https://www.emvtech.com.br"></a>Power by EMV Technology</small>
         </div><!--//container-->
     </footer><!--//footer-->
 
