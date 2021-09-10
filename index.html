@@ -196,7 +196,7 @@ Project Name
                                         </div><!--//content-->
                                     </div>
                                     <div class="code-block">
-                                        <h6>You must have call It with the http-method GET.</h6>
+                                        <h6>It's sample show you how to work with request GET.</h6>
                                         <pre><code class="language-javascript">"use strict";
 const AppController = require("./AppController");
 class UsersController extends AppController {
@@ -208,11 +208,11 @@ class UsersController extends AppController {
     }
 
     //http://127.0.0.1:5555/Users
-    get(callback) {
+    get() {
         //To get query params.
         const query = this.query;
 
-        callback({"message" : "Test request"}); //Response to the client who sent request.
+        return {"message" : "Test request"}; //Response to the client who sent request.
     }
 }
 module.exports = UsersController;</code></pre>
@@ -221,7 +221,7 @@ module.exports = UsersController;</code></pre>
 
                                 <div id="post" class="section-block">
                                     <div class="code-block">
-                                        <h6>You must have call It with the http-method POST.</h6>
+                                        <h6>Request POST.</h6>
                                         <pre><code class="language-javascript">"use strict";
 const AppController = require("./AppController");
 class UsersController extends AppController {
@@ -233,11 +233,11 @@ class UsersController extends AppController {
     }
 
     //http://127.0.0.1:5555/Users
-    post(callback) {
+    post() {
         //To get payload.
         const payload = this.payload;
 
-        callback({"message" : "Test request"}); //Response to the client who sent request.
+        return {"message" : "Test request"}; //Response to the client who sent request.
     }
 }
 module.exports = UsersController;</code></pre>
@@ -246,7 +246,7 @@ module.exports = UsersController;</code></pre>
 
                                 <div id="put" class="section-block">
                                     <div class="code-block">
-                                        <h6>You must have call It with the http-method PUT.</h6>
+                                        <h6>Request PUT.</h6>
                                         <pre><code class="language-javascript">"use strict";
 const AppController = require("./AppController");
 class UsersController extends AppController {
@@ -258,13 +258,13 @@ class UsersController extends AppController {
     }
 
     //http://127.0.0.1:5555/Users/id
-    put(callback) {
+    put() {
         //To get payload.
         const payload = this.payload;
         //To get param id.
         const id = this.id;
 
-        callback({"message" : "Test request"}); //Response to the client who sent request.
+        return {"message" : "Test request"}; //Response to the client who sent request.
     }
 }
 module.exports = UsersController;</code></pre>
@@ -273,7 +273,7 @@ module.exports = UsersController;</code></pre>
 
                                 <div id="delete" class="section-block">
                                     <div class="code-block">
-                                        <h6>You must have call It with the http-method DELETE.</h6>
+                                        <h6>Request DELETE.</h6>
                                         <pre><code class="language-javascript">"use strict";
 const AppController = require("./AppController");
 class UsersController extends AppController {
@@ -285,13 +285,13 @@ class UsersController extends AppController {
     }
 
     //http://127.0.0.1:5555/Users/id
-    delete(callback) {
+    delete() {
         //To get payload.
         const payload = this.payload;
         //To get param id.
         const id = this.id;
 
-        callback({"message" : "Test request"}); //Response to the client who sent request.
+        return {"message" : "Test request"}; //Response to the client who sent request.
     }
 }
 module.exports = UsersController;</code></pre>
@@ -300,7 +300,7 @@ module.exports = UsersController;</code></pre>
 
                                 <div id="other-resource" class="section-block">
                                     <div class="code-block">
-                                        <h6>It is a sample of how to create a custom action.</h6>
+                                        <h6>It's sample show you how to work with a custom action.</h6>
                                         <pre><code class="language-javascript">"use strict";
 const AppController = require("./AppController");
 class UsersController extends AppController {
@@ -312,13 +312,38 @@ class UsersController extends AppController {
     }
 
     //http://127.0.0.1:5555/Users/customAction
-    customAction(callback) {
+    customAction() {
         //To get payload.
         const payload = this.payload;
         //To get query params.
         const query = this.query;
 
-        callback({"message" : "Test request"}); //Response to the client who sent request.
+        return {"message" : "Test request"}; //Response to the client who sent request.
+    }
+}
+module.exports = UsersController;</code></pre>
+                                    </div><!--//code-block-->
+                                </div><!--//section-block-->
+
+                                <div id="form-data" class="section-block">
+                                    <div class="code-block">
+                                        <h6>It's sample show you how to work with the files from form-data.</h6>
+                                        <pre><code class="language-javascript">"use strict";
+const AppController = require("./AppController");
+class UsersController extends AppController {
+
+    init() {
+        this.model([
+            "User"
+        ]);
+    }
+
+    //http://127.0.0.1:5555/Users
+    async post(request) {
+        //To get form-data values.
+        const formData = await this.getFormData(request);
+
+        return {"message" : "Test request"}; //Response to the client who sent request.
     }
 }
 module.exports = UsersController;</code></pre>
@@ -338,9 +363,10 @@ module.exports = UsersController;</code></pre>
                                             <p>Each model is a reference from database table.</p>
                                         </div><!--//content-->
                                     </div>
+                                    <h3 class="block-title">INSERT</h3>
                                     <div class="code-block">
-                                        <h6>Sample of INSERT INTO &lt;table_name&gt;.</h6>
-                                        <pre><code class="language-javascript">async post(callback) {
+                                        <h6>INSERT INTO &lt;table_name&gt;  VALUES ($1, $2).</h6>
+                                        <pre><code class="language-javascript">async post() {
     let response = null;
     try {
         const res = await this.User.save({
@@ -360,15 +386,16 @@ module.exports = UsersController;</code></pre>
             }
         }
     }
-    callback(response); //Response to the client who sent request.
+    
+    return response; //Response to the client who sent request.
 }</code></pre>
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
                                 <div id="update"  class="section-block">
-                                    <h3 class="block-title">update</h3>
+                                    <h3 class="block-title">UPDATE</h3>
                                     <div class="code-block">
-                                        <h6>Sample of UPDATE &lt;table_name&gt; SET &lt;field&gt; = ? WHERE id = ?</h6>
-                                        <pre><code class="language-javascript">async put(callback) {
+                                        <h6>UPDATE &lt;table_name&gt; SET &lt;field&gt; = ? WHERE id = ?</h6>
+                                        <pre><code class="language-javascript">async put() {
     let response = null;
     try {
 
@@ -389,15 +416,16 @@ module.exports = UsersController;</code></pre>
             }
         }
     }
-    callback(response); //Response to the client who sent request.
+    
+    return response; //Response to the client who sent request.
 }</code></pre>
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
                                 <div id="model-delete"  class="section-block">
-                                    <h3 class="block-title">delete</h3>
+                                    <h3 class="block-title">DELETE</h3>
                                     <div class="code-block">
-                                        <h6>Sample of DELETE FROM &lt;table_name&gt; WHERE id = ?</h6>
-                                        <pre><code class="language-javascript">async delete(callback) {
+                                        <h6>DELETE FROM &lt;table_name&gt; WHERE id = ?</h6>
+                                        <pre><code class="language-javascript">async delete() {
     let response = null;
     try {
 
@@ -416,23 +444,42 @@ module.exports = UsersController;</code></pre>
             }
         }
     }
-    callback(response); //Response to the client who sent request.
+    
+    return response; //Response to the client who sent request.
 }</code></pre>
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
                                 <div id="findall"  class="section-block">
-                                    <h3 class="block-title">findAll</h3>
+                                    <h3 class="block-title">FIND ALL</h3>
                                     <div class="code-block">
-                                        <h6>Sample of SELECT * FROM &lt;table_name&gt; WHERE &lt;field&gt; = ?</h6>
-                                        <pre><code class="language-javascript">async get(callback) {
+                                        <h6>It's sample show you how to get query with the JOIN and operations as OR, IN, EQUALS...</h6>
+                                        <pre><code class="language-javascript">async get() {
     let response = null;
     try {
 
         const params = {
-            "conditions": {
-                "id": 1,
-                "operation": "="
-            },
+            "conditions": [
+                {
+                    "id": 1,
+                    "operation": "="
+                },
+                {
+                    "code": [
+                        "code1",
+                        "code2",
+                        "code3",
+                    ],
+                    "operation": "IN"
+                },
+                {
+                    "tag": [
+                        "tag1",
+                        "tag2",
+                        "tag3",
+                    ],
+                    "operation": "OR"
+                }
+            ],
             "join": [
                 { "INNER": { "table": "company", "on": "company.id = user.company_id" } }
             ],
@@ -460,15 +507,16 @@ module.exports = UsersController;</code></pre>
             }
         }
     }
-    callback(response); //Response to the client who sent request.
+    
+    return response; //Response to the client who sent request.
 }</code></pre>
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
                                 <div id="findby"  class="section-block">
-                                    <h3 class="block-title">findBy</h3>
+                                    <h3 class="block-title">FIND BY</h3>
                                     <div class="code-block">
-                                        <h6>Sample of SELECT * FROM &lt;table_name&gt; WHERE &lt;field&gt; = ?</h6>
-                                        <pre><code class="language-javascript">async findBy(callback) {
+                                        <h6>SELECT * FROM &lt;table_name&gt; WHERE &lt;field&gt; = ?</h6>
+                                        <pre><code class="language-javascript">async findBy() {
     let response = null;
     try {
 
@@ -487,7 +535,8 @@ module.exports = UsersController;</code></pre>
             }
         }
     }
-    callback(response); //Response to the client who sent request.
+    
+    return response; //Response to the client who sent request.
 }</code></pre>
                                     </div><!--//code-block-->
                                 </div><!--//section-block-->
@@ -588,6 +637,7 @@ module.exports = User;</code></pre>
                                         <a class="nav-link scrollto" href="#put">PUT</a>
                                         <a class="nav-link scrollto" href="#delete">DELETE</a>
                                         <a class="nav-link scrollto" href="#other-resource">OTHER /resource</a>
+                                        <a class="nav-link scrollto" href="#form-data">FORM-DATA</a>
                                     </nav><!--//nav-->
 	                                <a class="nav-link scrollto" href="#model-section">Model</a>
                                     <nav class="doc-sub-menu nav flex-column">
